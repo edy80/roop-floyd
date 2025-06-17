@@ -1,0 +1,24 @@
+{
+  "menu": [
+    {
+      "text": "Install",
+      "run": [
+        "python -m venv venv",
+        "{{self.python}} -m pip install --upgrade pip",
+        "{{self.python}} -m pip install torch torchvision onnxruntime numpy opencv-python-headless onnx insightface psutil tqdm ftfy regex pyvirtualcam",
+        "{{self.python}} -m pip install pydantic<2",
+        "{{self.python}} -m pip install albumentations==1.4.11",
+        "{{self.python}} -m pip install albucore==0.0.11",
+        "{{self.python}} -m pip install gradio==3.41.2"
+      ]
+    },
+    {
+      "text": "Start",
+      "run": "{{self.python}} run.py"
+    },
+    {
+      "text": "Edit FaceSwap Code (Fix)",
+      "run": "open ui/tabs/faceswap_tab.py"
+    }
+  ]
+}
